@@ -1,7 +1,7 @@
 .wrapper {
     display: flex;
     align-items: center;
-    padding: 6px 16px;
+    padding: 10px 16px;
     cursor: grab;
 
     &:hover {
@@ -9,21 +9,23 @@
     }
 }
 .avatar {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     object-fit: cover;
 }
 .info {
     flex: 1;
     margin-left: 12px;
+    display: flex;
+    flex-direction: column;
 }
 .name {
     font-size: 1.6rem;
     font-weight: 600;
 }
 .check {
-    margin-left: 10px;
+    margin-left: 4px;
     color: #20d5ec;
 }
 .username {

@@ -1,17 +1,21 @@
-import HeaderOnly from "~/components/Layouts/HeaderOnly";
+import config from '~/config';
 
-import Home from "~/components/pages/Home";
-import Following from "~/components/pages/Following";
-import Profile from "~/components/pages/Profile";
-import Upload from "~/components/pages/Upload";
+import HeaderOnly from '~/layouts/HeaderOnly';
+
+import Home from '~/components/pages/Home';
+import Following from '~/components/pages/Following';
+import Profile from '~/components/pages/Profile';
+import Upload from '~/components/pages/Upload';
+import Search from '~/components/pages/Search';
 
 const publicRoutes = [
-    { path: '/', conponent: Home },
-    { path: '/following', conponent: Following },
-    { path: '/profile', conponent: Profile },
-    { path: '/upload', conponent: Upload, layout: HeaderOnly },
-]
+    { path: config.routes.home, conponent: Home },
+    { path: config.routes.following, conponent: Following },
+    { path: config.routes.profile, conponent: Profile },
+    { path: config.routes.upload, conponent: Upload, layout: HeaderOnly },
+    { path: config.routes.search, conponent: Search, layout: null },
+];
 
-const privateRoutes = []
+const privateRoutes = [];
 
-export { publicRoutes, privateRoutes } 
+export { publicRoutes, privateRoutes };
