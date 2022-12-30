@@ -1,5 +1,4 @@
 import 'remixicon/fonts/remixicon.css';
-import './Icon.module.scss';
 
 export const EarthIcon = () => <i className="ri-earth-line"></i>;
 
