@@ -1,4 +1,3 @@
-import 'remixicon/fonts/remixicon.css';
 import Tippy from '@tippyjs/react'; // different import path!
 import 'tippy.js/dist/tippy.css';
 import classNames from 'classnames/bind';
@@ -11,12 +10,25 @@ import images from '~/assets/images';
 import Menu from '~/components/Popper/Menu';
 import Search from '../Search';
 import Image from '~/components/Image';
+import {
+    CoinIcon,
+    EarthIcon,
+    KeyboardIcon,
+    LogoutIcon,
+    QuestionIcon,
+    SendIcon,
+    SettingIcon,
+    UploadIcon,
+    UserIcon,
+    ChatIcon,
+    MoreIcon,
+} from '~/components/Icon';
 
 const cx = classNames.bind(styles);
 
 const MENU_ITEM = [
     {
-        icon: <i className="ri-earth-line"></i>,
+        icon: <EarthIcon />,
         title: 'English',
         children: {
             title: 'Language',
@@ -35,38 +47,38 @@ const MENU_ITEM = [
         },
     },
     {
-        icon: <i className="ri-question-line" />,
+        icon: <QuestionIcon />,
         title: 'Feedback and help',
         to: '/feedback',
     },
     {
-        icon: <i className="ri-keyboard-box-line" />,
+        icon: <KeyboardIcon />,
         title: 'Keyboard shortcuts',
     },
 ];
 
 function Header() {
-    const currentUser = false;
+    const currentUser = true;
 
     const userMenu = [
         {
-            icon: <i className="ri-user-line" />,
+            icon: <UserIcon />,
             title: 'View profile',
             to: '/@ndtfat',
         },
         {
-            icon: <i className="ri-copper-coin-line" />,
+            icon: <CoinIcon />,
             title: 'Get coins',
             to: '/coin',
         },
         {
-            icon: <i className="ri-settings-2-line" />,
+            icon: <SettingIcon />,
             title: 'Settings',
             to: '/settings',
         },
         ...MENU_ITEM,
         {
-            icon: <i className="ri-logout-box-r-line" />,
+            icon: <LogoutIcon />,
             title: 'Log out',
             to: '/logout',
             separate: true,
@@ -97,19 +109,19 @@ function Header() {
                         <>
                             <Tippy content="Upload Video">
                                 <button className={cx('actions-btn')}>
-                                    <i className="ri-upload-cloud-line" />
+                                    <UploadIcon />
                                 </button>
                             </Tippy>
 
                             <Tippy content="Message">
                                 <button className={cx('actions-btn')}>
-                                    <i className="ri-send-plane-line" />
+                                    <SendIcon />
                                 </button>
                             </Tippy>
 
                             <Tippy content="Inbox">
                                 <button className={cx('actions-btn')}>
-                                    <i className="ri-chat-3-line" />
+                                    <ChatIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -125,7 +137,7 @@ function Header() {
                             <img className={cx('user-avatar')} alt="fat" src={images.userAvatar} />
                         ) : (
                             <button className={cx('more-btn')}>
-                                <i className="ri-more-2-fill"></i>
+                                <MoreIcon />
                             </button>
                         )}
                     </Menu>

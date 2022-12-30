@@ -8,6 +8,7 @@ import * as request from '~/utils/httpRequest';
 import { useDebounce } from '~/hooks';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
+import { CloseIcon, LoaderIcon, SearchIcon } from '~/components/Icon';
 
 const cx = classNames.bind(styles);
 
@@ -90,13 +91,13 @@ function Search() {
                     />
                     {!!searchValue && !loading && (
                         <button className={cx('clear')} onClick={handleClear}>
-                            <i className="ri-close-circle-fill"></i>
+                            <CloseIcon />
                         </button>
                     )}
 
                     {loading && (
                         <span className={cx('loading')}>
-                            <i className="ri-loader-4-line"></i>
+                            <LoaderIcon />
                         </span>
                     )}
 
@@ -106,7 +107,7 @@ function Search() {
                             e.preventDefault();
                         }}
                     >
-                        <i className="ri-search-line" />
+                        <SearchIcon />
                     </button>
                 </div>
             </HeadlessTippy>
