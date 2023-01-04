@@ -13,6 +13,7 @@ function Button({
     bl_wh,
     rounded,
     small,
+    medium,
     large,
     disabled,
     children,
@@ -52,6 +53,7 @@ function Button({
         bl_wh,
         rounded,
         small,
+        medium,
         large,
         disabled,
     });
@@ -69,6 +71,7 @@ Button.propTypes = {
     to: PropTypes.string,
     href: PropTypes.string,
     small: PropTypes.bool,
+    medium: PropTypes.bool,
     large: PropTypes.bool,
     bl_wh: PropTypes.bool,
     primary: PropTypes.bool,
